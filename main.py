@@ -2,7 +2,6 @@ from scapy.all import ARP, Ether, srp
 import dearpygui.dearpygui as dpg
 import threading
 import socket
-import time
 
 dpg.create_context()
 
@@ -27,7 +26,7 @@ with dpg.window(label="Port scan", width=300, height=340, pos=(600, 0), no_resiz
         start_port = int(dpg.get_value("port_scanner_start_port"))
         end_port = int(dpg.get_value("port_scanner_end_port"))
 
-        print(f"[PORT SCAN] IP {ip} Port {start_port}:{end_port}")
+        print(f"[PORT SCAN] IP: {ip} Port: {start_port}:{end_port}")
         threads = []
         for port in range(start_port, end_port + 1):
             thread = threading.Thread(target=scan_port, args=(ip, port))
@@ -67,7 +66,7 @@ with dpg.window(label="UDP", width=300, height=165, pos=(300, 0), no_resize=True
             client = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
             client.sendto(data.encode(), address)
             client.close()
-            print(f"[UDP SOCKET CLIENT] IP {address} Data {data}")
+            print(f"[UDP SOCKET CLIENT] IP: {address} Data: {data}")
         except Exception as e:
             print(e)
             pass
@@ -89,7 +88,7 @@ with dpg.window(label="UDP", width=300, height=165, pos=(300, 0), no_resize=True
 
             print("[UDP CLIENT LOG] Finished successfully")
         except Exception as e:
-            print(f"[TCP CLIENT LOG] Error {e}")
+            print(f"[TCP CLIENT LOG] Error: {e}")
 
     dpg.add_input_text(label="Address", tag="udp_ip")
     dpg.add_input_text(label="Port", tag="udp_port")
@@ -105,7 +104,7 @@ with dpg.window(label="TCP", width=300, height=165, no_collapse=True, no_move=Tr
             client.connect(address)
             client.sendall(data.encode())
             client.close()
-            print(f"[TCP SOCKET CLIENT] IP {address} Data {data}")
+            print(f"[TCP SOCKET CLIENT] IP: {address} Data: {data}")
         except Exception as e:
             print(e)
             pass
@@ -131,7 +130,7 @@ with dpg.window(label="TCP", width=300, height=165, no_collapse=True, no_move=Tr
 
             print("[TCP CLIENT LOG] Finished successfully")
         except Exception as e:
-            print(f"[TCP CLIENT LOG] Error {e}")
+            print(f"[TCP CLIENT LOG] Error: {e}")
         client_socket.close()
 
     dpg.add_input_text(label="Address", tag="tcp_url")
