@@ -47,7 +47,7 @@ with dpg.window(label="Port scan", width=300, height=340, pos=(600, 0), no_resiz
 
 with dpg.window(label="IP scan", width=600, height=175, pos=(0, 165), no_resize=True, no_close=True, no_collapse=True, no_move=True, no_scrollbar=True):
     def scan_ip():
-        print("[IP SCAN] Range 192.168.1.1/24")
+        print("[IP SCAN] range 192.168.1.1/24")
         ip_range = "192.168.1.1/24"
         arp = ARP(pdst=ip_range)
         ether = Ether(dst="ff:ff:ff:ff:ff:ff")
@@ -86,9 +86,9 @@ with dpg.window(label="UDP", width=300, height=165, pos=(300, 0), no_resize=True
             for thread in threads:
                 thread.join()
 
-            print("[UDP CLIENT LOG] Finished successfully")
+            print("[UDP CLIENT LOG] finished successfully")
         except Exception as e:
-            print(f"[TCP CLIENT LOG] Error: {e}")
+            print(f"[TCP CLIENT LOG] error: {e}")
 
     dpg.add_input_text(label="Address", tag="udp_ip")
     dpg.add_input_text(label="Port", tag="udp_port")
@@ -128,9 +128,9 @@ with dpg.window(label="TCP", width=300, height=165, no_collapse=True, no_move=Tr
             for thread in threads:
                 thread.join()
 
-            print("[TCP CLIENT LOG] Finished successfully")
+            print("[TCP CLIENT LOG] finished successfully")
         except Exception as e:
-            print(f"[TCP CLIENT LOG] Error: {e}")
+            print(f"[TCP CLIENT LOG] error: {e}")
         client_socket.close()
 
     dpg.add_input_text(label="Address", tag="tcp_url")
