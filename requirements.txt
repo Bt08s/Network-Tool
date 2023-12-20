@@ -1,2 +1,1 @@
-dearpygui
-scapy
+python-nmap
