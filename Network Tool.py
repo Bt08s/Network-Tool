@@ -175,9 +175,9 @@ if __name__ == '__main__':
         elif cmd == "clear":
             clear()
         elif cmd == "simple host scan":
-            simple_net_scan()
+            simple_host_scan()
         elif cmd == "adv host scan":
-            adv_net_scan()
+            adv_host_scan()
 
         elif cmd == "port scan":
             nm = nmap.PortScanner()
