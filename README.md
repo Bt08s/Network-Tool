@@ -1,3 +1,6 @@
-# For more info dm batu_8844
+# Installation
+```py
 
-![image](https://github.com/Bt08s/Network-Tool/assets/68190921/76165230-46ba-43de-a7f8-b3744376fb9f)
+```
+
+![image](https://github.com/Bt08s/Network-Tool/assets/68190921/d26dd242-7d4f-4c87-be4e-c38a36a5228c)
