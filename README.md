@@ -2,6 +2,7 @@
 ```py
 git clone https://github.com/Bt08s/Network-Tool.git
 cd Network-Tool
+pip install -r requirements.txt
 python main.py
 ```
 
