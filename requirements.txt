@@ -1,3 +1,2 @@
 python-nmap
-psutil
-datetime
+scapy
